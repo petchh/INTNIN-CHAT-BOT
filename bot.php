@@ -39,6 +39,15 @@ if (!is_null($events['events'])) {
 					'type'=>'text',
 					'text' =>'เข้า www.education.mju.ac.th แล้วเลือก เข้าสุ่ระบบนักศึกษาครับ'
 				];
+			}else if((eregi ( "คศ101", $text, $regs ))or(eregi ( "แคลคูลัส 1", $text, $regs ))){
+				$messages = [
+					'type'=>'text',
+					'text' =>'คศ101	แคลคูลัส 1
+	Course Description:
+	ลิมิตและความต่อเนื่อง อนุพันธ์ การประยุกต์ของอนุพันธ์ ดิฟเฟอเรนเชียลและอินทริกัลป์ไม่จำกัดเขต อินทริกัลป์จำกัดเขต และการประยุกต์ อนุพันธ์ย่อย
+	Limit and continuity of functions, the derivative of algebraic functions and transcendental functions, the indefinite integrals and techniques of integration, and the definite integrals with applications
+'
+				];
 			}
 			
 			// Make a POST Request to Messaging API to reply to sender
