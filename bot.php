@@ -63,6 +63,12 @@ if (!is_null($events['events'])) {
 					'type'=>'text',
 					'text' =>'การทะเลาะกันไม่ทำให้ใครมีความสุขหรอกนะครับ ลองใจเย็นๆแล้วคุยกันดีๆนะ ^^'
 				];
+			}else if((eregi ( "ชั่วโมงกิจกรรม", $text, $regs ))or(eregi ( "เวลาโมงกิจกรรม", $text, $regs ))){
+				$messages = [
+					'type'=>'text',
+					'text' =>'สามารถตรวจสอบจำนวนชั่วโมงกิจกรรมได้ที่ www.erp.mju.ac.th/student/signin.aspx?/typeAuthentication=1'
+				];
+				
 			}
 			
 			// Make a POST Request to Messaging API to reply to sender
