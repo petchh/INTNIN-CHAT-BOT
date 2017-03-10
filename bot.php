@@ -53,7 +53,7 @@ if (!is_null($events['events'])) {
 					'type'=>'text',
 					'text' =>'แนะนำให้ดาวน์โหลด มจท32 ที่เว็บ education.mju.ac.th แล้วยื่นที่งานตารางสอนครับ'
 				];
-			}else if((eregi ( "ขาดความอบอุ่น", $text, $regs ))or(eregi ( "ต้องการคนสนใจ", $text, $regs ))){
+			}else if((eregi ( "ขาดความอบอุ่น", $text, $regs ))or(eregi ( "ต้องการคนสนใจ", $text, $regs ))or(eregi ( "อยากให้มีคนสนใจ", $text, $regs ))){
 				$messages = [
 					'type'=>'text',
 					'text' =>'ถ้าอยากให้ใครดีกับเราเราต้องทำดีกับเขาก่อนดูนะครับ'
