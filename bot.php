@@ -100,7 +100,7 @@ if (!is_null($events['events'])) {
 			$updataMSG = $str[1]."|".$str[2];
 			if($str[0] == "update"){
 				$strMSG = urlencode($updataMSG);
-				$result = $s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/update_frequency.php?msg='.$strMSG);
+				$result = $s_ans = file_get_contents('http://202.28.37.32/smartcsmju/Line_INTNINBOT/update_frequency.php?msg='.$strMSG);
 				$messages = [
 					 "type"=> "sticker",
 					 "packageId"=> "2",
@@ -108,7 +108,7 @@ if (!is_null($events['events'])) {
 				];
 			}else if($str[0] == "insert"){
 				$strMSG =  urlencode($insertMSG);
-				$result = $s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/insert_ans.php?msg='.$strMSG);
+				$result = $s_ans = file_get_contents('http://202.28.37.32/smartcsmju/Line_INTNINBOT/insert_ans.php?msg='.$strMSG);
 				$messages = [
 					'type'=>'text',
 					'text'=>'พิมพ์ '.$result.':คำตอบ'
