@@ -5,7 +5,7 @@ function find_ans($text,$userId) {
     $ans_data =array();
     $str = $userId.":".$text ;
     $strMSG = urlencode($str);
-    $s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/check_MSG.php?msg='.$strMSG);
+    $s_ans = file_get_contents('http://202.28.37.32/smartcsmju/Line_INTNINBOT/check_MSG.php?msg='.$strMSG);
     $msg_decode = json_decode($s_ans, true);
     $m_stat = $msg_decode['status'];
     //$msg = $msg_decode['msg'];
@@ -58,7 +58,7 @@ function save_log($replyToken,$userId) {
 	
 	$str = $replyToken."|".$userId ;
 	$strMSG = urlencode($str);
-	$s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/save_log.php?msg='.$strMSG);
+	$s_ans = file_get_contents('http://202.28.37.32/smartcsmju/Line_INTNINBOT/save_log.php?msg='.$strMSG);
 
 return $s_ans; 
 }
